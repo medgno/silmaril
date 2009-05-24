@@ -1,0 +1,11 @@
+Any patches are welcome. Email them to david@davidschroeder.net. If there's enough interest in this project, I'll get a mailing list set up.
+
+Conventions used in this project:
+* Opening braces are *NOT* on their own line
+* Indentation is with tabs, and I tend to display them as 4-spaces
+* Classes are CamelCased
+* Variables are the other form of camelCased
+* File names are the class name (with capitalization), or the name of what's in the file (e.g. DumbContainer vs pfm)
+* Extensions are .cpp and .h
+
+

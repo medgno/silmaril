@@ -1,0 +1,9 @@
+This is by no means a finished project. Code which needs attention is (hopefully) commented with either FIXME or TODO.
+
+In pfm.h/.cpp there are endianness issues. I don't have the machines needed to test any fixes. A fix would probably either be detecting endianness and writing the correct header, or somehow converting to network byte order.
+
+This program can use a very large amount of memory. For determining the memory needed, multiply the number of pixels (height x width) by the number of frames, and multiply that by sizeof(float) on your machine. Memory usage will be somewhat higher than indicated, but it will give a good estimate.
+
+Rendering times would probably be improved by a very good deal by implementing an octtree container. Infinite objects will still need to be handled in the same way as GridContainers.
+
+Also, a kd-tree for getting samples from the cache would make rendering times a good deal better.

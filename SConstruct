@@ -1,0 +1,26 @@
+silmaril_files = ['src/BoundingBox.cpp',
+	'src/Box.cpp',
+	'src/Color.cpp',
+	'src/ColorTimeCache.cpp',
+	'src/DumbContainer.cpp',
+	'src/GLUTCamera.cpp',
+	'src/GridContainer.cpp',
+	'src/InputHandler.cpp',
+	'src/Lambert.cpp',
+	'src/Phong.cpp',
+	'src/PhotonCache.cpp',
+	'src/Plane.cpp',
+	'src/PointCamera.cpp',
+	'src/Random.cpp',
+	'src/SimpleSceneReader.cpp',
+	'src/Sphere.cpp',
+	'src/Triangle.cpp',
+	'src/TriangleMesh.cpp',
+	'src/World.cpp',
+	'src/main.cpp',
+	'src/matrix.cpp',
+	'src/pfm.cpp',
+	'src/vec.cpp']
+
+Program('silmaril', silmaril_files)
+
