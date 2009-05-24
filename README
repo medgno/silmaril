@@ -1,0 +1,4 @@
+Only big thing to note at this point is that Scons is required to build
+this software. If you don't have scons, it's pretty easy to compile.
+Compile all the c++ sources together and it should work well enough.
+
