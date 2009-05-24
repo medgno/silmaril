@@ -1,0 +1,86 @@
+SceneVersion3
+
+Camera PointCamera {
+	Eye 4, 0, 4
+	Look 0,0,4
+	Distance 1
+}
+
+Lights {
+	Box {
+		Vertex1 -3, -1, 9.7
+		Vertex2 -4, 1, 9.8
+		Material Emitter { Color 2.3, 2.1, 2 }
+	}
+	
+}
+
+Things GridContainer {
+	Resolution .1
+	
+	AddLights
+	
+	Box {
+		Vertex1 -5, -5, -1
+		Vertex2 5, 5, 0
+		Material Lambert { Color .8, .8, .8 }
+	}
+	
+	Box {
+		Vertex1 -5, -5, 10
+		Vertex2 5, 5, 11
+		Material Lambert { Color .8, .8, .8 }
+	}
+	
+	Box {
+		Vertex1 -5, -5, -1
+		Vertex2 -6, 5, 10
+		Material Phong { Color .9, .9, .9 Exponent 100000 }
+	}
+	
+	Box {
+		Vertex1 5, -5, -1
+		Vertex2 6, 5, 10
+		Material Phong { Color .9, .9, .9 Exponent 100000 }
+	}
+	
+	Box {
+		Vertex1 -5, -5, -1
+		Vertex2 5, -6, 10
+		Material Lambert { Color .8, .4, .4 }
+	}
+	
+	Box {
+		Vertex1 -5, 5, -1
+		Vertex2 5, 6, 10
+		Material Lambert { Color .4, .8, .4 }
+	}
+	
+	TriangleMesh {
+		Filename "/Users/medgno/project/silmaril/cube.obj"
+		Rotate 0, 0, -38
+		Translate -2, -2, 1
+		Scale 1.5
+		Material Lambert { Color .8, .8, .8 }
+	}
+	
+	Sphere {
+		Center -2, -2, 3.5
+		Radius 1
+		Material Phong { Color .99, .9, .8 Exponent 10 }
+	}
+	
+}
+
+Depth 20
+Samples 2000
+
+CacheSize 100000
+SampleRadius .5
+
+Lightspeed .055
+Frames 1000
+
+SingleFrame
+
+Background 0,0,0

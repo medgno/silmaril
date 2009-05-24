@@ -1,0 +1,105 @@
+SceneVersion3
+
+Camera GLUTCamera { }
+
+Lights {
+	Box {
+		Vertex1 0, 4, 0
+		Vertex2 5, 5, 10
+		Material Emitter { Color 4, 4, 4 }
+	}
+	
+}
+
+Things GridContainer {
+	Resolution .1
+	
+	AddLights
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 20, 20, -4
+		Material Lambert { Color .9, .9, .9  }
+	}
+	
+	
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 20, -5, 10
+		Material Lambert { Color .7, .3, .4 }
+	}
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 -5, 20, 10
+		Material Lambert { Color .5, .7, .2 }
+	}
+	
+	
+	Sphere {
+		Center 0,0,-2
+		Radius 1
+		Material Lambert { Color .9, .9, .9 }
+	}
+	
+	Sphere {
+		Center 0,0,0
+		Radius 1
+		Material Phong { Color .9, .9, .9 Exponent 5 }
+	}
+	
+	Sphere {
+		Center 0,0,2
+		Radius 1
+		Material Lambert { Color .2, .9, .2 }
+	}
+	
+	Sphere {
+		Center 0,0,4
+		Radius 1
+		Material Phong {Color .9, .9, .9 Exponent 300 }
+	}
+	Sphere {
+		Center 2, 3, -2
+		Radius 1
+		Material Phong {Color .76, .64, .23 Exponent 100 }
+	}
+	
+	Box {
+		Vertex1 4, 0, -3
+		Vertex2 5, 1, 0
+		Material Phong {Color .9, .9, .9 Exponent 100 }
+	}
+	
+	Box {
+		Vertex1 4, 2, -3
+		Vertex2 5, 3, 0
+		Material Phong {Color .7, .4, .9 Exponent 100 }
+	}
+	
+	Box{
+		Vertex1 20, 20, -3
+		Vertex2 20, -4, 10
+		Material Lambert { Color .9, .9, .9 }
+	}
+	
+	Box {
+		Vertex1 20, 20, -3
+		Vertex2 -4, 20, 10
+		Material Lambert { Color .9, .9, .9 }
+	}
+	
+	Box {
+		Vertex1 -4, -4, 10
+		Vertex2 20, 20, 11
+		Material Lambert { Color .9, .9, .9 }
+	}
+}
+
+Depth 1
+Samples 1
+
+SingleFrame
+
+Background 0,0,0

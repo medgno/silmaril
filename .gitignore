@@ -1,3 +1,4 @@
 silmaril
 .sconsign.dblite
 *.o
+objs/*

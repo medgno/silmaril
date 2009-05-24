@@ -1,0 +1,80 @@
+SceneVersion2
+
+Camera PointCamera {
+	Eye 6,2,2
+	Distance 1
+}
+
+Lights {
+	Box {
+		Vertex1 -3, -3, 9
+		Vertex2 9, 9, 9.5
+		Material Emitter { Color 2, 2, 2 }
+	}
+	
+}
+
+Things GridContainer {
+	Resolution .1
+	
+	AddLights
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 20, 20, -4
+		Material Lambert { Color .9, .9, .9  }
+	}
+	
+	Sphere {
+		Center 0,0,0
+		Radius 2
+		Material Lambert { Color .8, .8, .8 }
+	}
+	
+	Sphere {
+		Center 0,4,0
+		Radius 2
+		Material Phong { Color .8, .8, .8 Exponent 100 }
+	}
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 7, -5, 10
+		Material Lambert { Color .5, .9, .5 }
+	}
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 -5, 7, 10
+		Material Lambert { Color .9, .5, .5 }
+	}
+	
+	
+	Box{
+		Vertex1 7, 7, -3
+		Vertex2 7, -4, 10
+		Material Lambert { Color .7, .7, .7 }
+	}
+	
+	Box {
+		Vertex1 7, 7, -3
+		Vertex2 -4, 7, 10
+		Material Lambert { Color .7, .7, .7 }
+	}
+	
+	Box {
+		Vertex1 -4, -4, 10
+		Vertex2 7, 7, 11
+		Material Lambert { Color .9, .9, .9 }
+	}
+}
+
+Depth 10
+Samples 1
+
+CacheSize 500000
+SampleRadius .5
+
+SingleFrame
+
+Background 0,0,0

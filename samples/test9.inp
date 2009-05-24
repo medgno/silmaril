@@ -1,0 +1,48 @@
+SceneVersion2
+
+Camera GLUTCamera { }
+
+Lights {
+	Sphere {
+		Center 0.0, 0.0, 4.0
+		Radius 1
+		Material Emitter { Color 1, 1, 1 }
+	}
+	
+	
+}
+
+Things GridContainer {
+	Resolution .1
+	
+	AddLights
+	
+	Sphere {
+		Center 1, -2, 0
+		Radius 1
+		Material Phong { Color .8, .9, .2 Exponent 100 }
+	}
+	
+	Box {
+		Vertex1 30, 30, -1
+		Vertex2 -30, -30, 0
+		Material Lambert { Color .9, .9, .9 }
+	}
+	
+	Box {
+		Vertex1 -1, -1, -1
+		Vertex2 -2, -2, 10
+		Material Lambert { Color .9, .2, .8 }
+	}
+	
+	Box {
+		Vertex1 -.5, 3, -1
+		Vertex2 .5, 4, 5
+		Material Lambert { Color .5, .2, .95 }
+	}
+}
+
+Depth 4
+Samples 1
+
+Background 0,0,0

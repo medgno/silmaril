@@ -1,0 +1,44 @@
+SceneVersion3
+
+Camera PointCamera {
+	Eye 0, 8, 0
+	Look 0,0,0
+	Distance 1
+}
+
+Lights {
+	Box {
+		Vertex1 -2, 9, -2
+		Vertex2 2, 11, 2
+		Material Emitter { Color 2.3, 2.1, 2 }
+	}
+	
+}
+
+Things GridContainer {
+	Resolution .1
+	
+	AddLights
+	
+		
+	TriangleMesh {
+		Filename "/Users/medgno/project/silmaril/knobby-tunnel.obj"
+		Rotate 0, 0, 0
+		Translate 0, 0, 0
+		Scale 1
+		Material Phong { Color .99, .9, .8 Exponent 1 }
+	}
+}
+
+Depth 10
+Samples 3000
+
+CacheSize 2000000
+SampleRadius .5
+
+Lightspeed 1.55
+Frames 10
+
+SingleFrame
+
+Background 0,0,0

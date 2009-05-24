@@ -1,0 +1,42 @@
+SceneVersion1
+
+Camera GLUTCamera { }
+
+Things GridContainer {
+	Resolution 1
+	
+	Plane {
+		Normal 0, 0, 1
+		Distance 1
+		Material MultiMaterial {
+			DiffuseSampler { Color .6, .6, .65 }
+		}
+	}
+
+	TriangleMesh {
+		Filename "/Users/medgno/project/silmaril/ateneam.obj"
+		Scale .001
+		Rotate -90, 0, 0
+		Translate 0, 0, 1
+		Material MultiMaterial {
+			DiffuseSampler { Color .9, .8, .75 }
+		}
+	}
+	
+	Sphere { Center 0, 50, 0 Radius 30 Material Emitter { Color 2, 2, 2 } }
+	
+	Sphere { Center 0, -50, 30 Radius 30 Material Emitter { Color 3, 2, 2 } }
+	
+}
+
+Lights {
+	
+}
+
+Depth 3
+
+Samples 2000
+
+SingleFrame
+
+Background 0,0,0

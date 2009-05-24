@@ -1,0 +1,52 @@
+SceneVersion1
+
+Camera GLUTCamera { }
+
+Things GridContainer {
+	Resolution 1
+	
+	Plane {
+		Normal 0, 0, 1
+		Distance 1
+		Material MultiMaterial {
+			DiffuseSampler { Color .8, .8, .8 }
+			Lambert { Color .8, .8, .8 }
+		}
+	}
+
+	TriangleMesh {
+		Filename "/Users/medgno/project/silmaril/venusm.obj"
+		Scale .001
+		Rotate -90, 0, 125
+		Translate 0, -.75, 0
+		Material MultiMaterial {
+			DiffuseSampler { Color .9, .5, .6 }
+			Lambert { Color .9, .7, .8 }
+		}
+	}
+	
+	TriangleMesh {
+		Filename "/Users/medgno/project/silmaril/venusm.obj"
+		Scale .001
+		Rotate -90, 0, -66
+		Translate 0, .75, 0
+		Material MultiMaterial {
+			DiffuseSampler { Color .8, .8, .8 }
+			Lambert { Color .8, .8, .8 }
+		}
+	}
+	
+}
+
+Lights {
+	AreaLight { Position -5, 3, 10 Color 28, 26, 20 Size .3 }
+	AreaLight { Position 0, 0, 100 Color 20, 20, 30 Size 60 }
+}
+
+Depth 5
+
+Samples 400
+
+SingleFrame
+
+Background 0,0,0

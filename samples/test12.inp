@@ -1,0 +1,72 @@
+SceneVersion2
+
+Camera GLUTCamera { }
+
+Lights {
+	Box {
+		Vertex1 0, 4, 0
+		Vertex2 5, 5, 10
+		Material Emitter { Color 4, 4, 4 }
+	}
+	
+}
+
+Things GridContainer {
+	Resolution .1
+	
+	AddLights
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 20, 20, -4
+		Material Lambert { Color .9, .9, .9  }
+	}
+	
+	
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 20, -5, 10
+		Material Lambert { Color .5, .9, .5 }
+	}
+	
+	Box {
+		Vertex1 -4, -4, -3
+		Vertex2 -5, 20, 10
+		Material Lambert { Color .9, .5, .5 }
+	}
+	
+	
+	TriangleMesh {
+		Filename "/Users/medgno/project/silmaril/ateneam.obj"
+		Scale .001
+		Rotate -90, 0, 0
+		Translate 0, 0, -1.5
+		Material Phong { Color .8, .8, .8 Exponent 100 }
+	}
+	
+	Box{
+		Vertex1 20, 20, -3
+		Vertex2 20, -4, 10
+		Material Lambert { Color .9, .9, .9 }
+	}
+	
+	Box {
+		Vertex1 20, 20, -3
+		Vertex2 -4, 20, 10
+		Material Lambert { Color .9, .9, .9 }
+	}
+	
+	Box {
+		Vertex1 -4, -4, 10
+		Vertex2 20, 20, 11
+		Material Lambert { Color .9, .9, .9 }
+	}
+}
+
+Depth 10
+Samples 20
+
+SingleFrame
+
+Background 0,0,0

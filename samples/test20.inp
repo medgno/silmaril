@@ -1,0 +1,79 @@
+SceneVersion3
+
+Camera PointCamera {
+	Eye 4, 2, 6
+	Look 0,0,4
+	Distance 1
+}
+
+Lights {
+	Box {
+		Vertex1 -3, -1, 9.7
+		Vertex2 -4, 1, 9.8
+		Material Emitter { Color 2.3, 2.1, 2 }
+	}
+	
+}
+
+Things GridContainer {
+	Resolution .1
+	
+	AddLights
+	
+	Box {
+		Vertex1 -5, -5, -1
+		Vertex2 5, 5, 0
+		Material Lambert { Color .8, .8, .8 }
+	}
+	
+	Box {
+		Vertex1 -5, -5, 10
+		Vertex2 5, 5, 11
+		Material Lambert { Color .6, .8, .6 }
+	}
+	
+	Box {
+		Vertex1 -5, -5, -1
+		Vertex2 -6, 5, 10
+		Material Lambert { Color .6, .6, .8 }
+	}
+	
+	Box {
+		Vertex1 5, -5, -1
+		Vertex2 6, 5, 10
+		Material Lambert { Color .8, .8, .6 }
+	}
+	
+	Box {
+		Vertex1 -5, -5, -1
+		Vertex2 5, -6, 10
+		Material Lambert { Color .8, .6, .8 }
+	}
+	
+	Box {
+		Vertex1 -5, 5, -1
+		Vertex2 5, 6, 10
+		Material Lambert { Color .6, .8, .8 }
+	}
+	
+	TriangleMesh {
+		Filename "/Users/medgno/project/silmaril/silmaril.obj"
+		Rotate 0, 90, 0
+		Translate -2, 0, 1
+		Scale 1.5
+		Material Phong { Color .95, .73, .2 Exponent 300 }
+	}
+}
+
+Depth 10
+Samples 6000
+
+CacheSize 100000
+SampleRadius .5
+
+Lightspeed .055
+Frames 1000
+
+SingleFrame
+
+Background 0,0,0
